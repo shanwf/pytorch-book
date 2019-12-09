@@ -8,7 +8,7 @@
 
 ##2  数据准备
 
-本试验使用的数据来自coco，你也可以使用其它数据，比如ImageNet。请尽量保证数据的多样性，**不建议**使用单一种类的数据集，比如LSUN或者人脸识别数据集之类的。
+本试验使用的数据来自[COCO](http://cocodataset.org/#download)，点[此](http://images.cocodataset.org/zips/train2014.zip)下载。 你也可以使用其它数据，比如ImageNet。请尽量保证数据的多样性，**不建议**使用单一种类的数据集，比如LSUN或者人脸识别数据集之类的。
 
 请确保所有的图片保存于`data/coco/`文件夹下,形如：
 ```Bash
@@ -34,6 +34,7 @@ python main.py train --use-gpu --data-root=data --batch-size=2
 - 生成图片
 
 读者可以[点此](http://pytorch-1252820389.cosbj.myqcloud.com/transformer.pth)下载预训练的模型`transformer.pth`，
+建议下载一张高清的图片，这样风格迁移的效果会比较好。
 ```bash
 python main.py stylize  --model-path='transformer.pth' \
                  --content-path='amber.jpg'\  
@@ -75,13 +76,13 @@ python main.py stylize  --model-path='transformer.pth' \
 ### 兼容性测试
 train 
 - [x] GPU  
-- [x] CPU 
-- [x] Python2
+- [] CPU 
+- [] Python2
 - [x] Python3
 
 test: 
 
 - [x] GPU
 - [x] CPU
-- [x] Python2
+- [] Python2
 - [x] Python3

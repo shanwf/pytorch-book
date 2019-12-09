@@ -37,14 +37,14 @@ Usage： python main.py FUNCTION --key=value,--key2=value2 ..
 
 - 训练
 ```bash
-python main.py train --nogpu --visdom=False
+python main.py train --gpu --vis=False
 ```
 
 - 生成图片
 
 [点此](http://pytorch-1252820389.cosbj.myqcloud.com/netg_200.pth)可下载预训练好的生成模型，如果想要下载预训练的判别模型，请[点此](http://pytorch-1252820389.cosbj.myqcloud.com/netd_200.pth)
 ```bash
-python main.py generate --nogpu --visdom=False \
+python main.py generate --nogpu --vis=False \
             --netd-path=checkpoints/netd_200.pth \
             --netg-path=checkpoints/netg_200.pth \
             --gen-img=result.png \
@@ -94,13 +94,13 @@ python main.py generate --nogpu --visdom=False \
 ### 兼容性测试
 train 
 - [x] GPU  
-- [x] CPU  
-- [x] Python2
+- [] CPU  
+- [] Python2
 - [x] Python3
 
 test: 
 
 - [x] GPU
 - [x] CPU
-- [x] Python2
+- [] Python2
 - [x] Python3
